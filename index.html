@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#15281f" />
+  <title>2026 成功嶺入伍行事曆｜10/12 入伍</title>
+  <style>
+    :root{
+      --bg:#0f1713; --panel:#17231d; --panel2:#1c2b23; --ink:#f6f3e8; --muted:#b9c6bc;
+      --line:#31443a; --accent:#d6b36a; --accent2:#8bb89d; --danger:#df8d7f;
+      --soft:#22372c; --blue:#9eb8cf; --shadow:0 18px 44px rgba(0,0,0,.25);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; color:var(--ink); background:
+      radial-gradient(circle at 92% 5%, rgba(214,179,106,.13), transparent 28rem),
+      radial-gradient(circle at 7% 28%, rgba(139,184,157,.10), transparent 26rem),
+      var(--bg);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+      line-height:1.65;
+    }
+    a{color:#d9e9de}
+    .wrap{max-width:1180px;margin:auto;padding:24px}
+    .hero{
+      position:relative; overflow:hidden; padding:36px; border:1px solid var(--line);
+      border-radius:28px; background:linear-gradient(145deg,rgba(29,45,36,.97),rgba(17,29,23,.96)); box-shadow:var(--shadow);
+    }
+    .hero:after{
+      content:"";position:absolute;right:-80px;top:-110px;width:320px;height:320px;border-radius:50%;
+      border:44px solid rgba(214,179,106,.08);
+    }
+    .eyebrow{font-size:13px;letter-spacing:.16em;color:var(--accent);font-weight:800;text-transform:uppercase}
+    h1{font-size:clamp(34px,6vw,72px);line-height:1.04;margin:.28em 0 .2em;letter-spacing:-.035em}
+    .lead{max-width:760px;color:#dbe4dd;font-size:clamp(16px,2vw,21px)}
+    .hero-grid,.stats,.grid2,.grid3{display:grid;gap:16px}
+    .hero-grid{grid-template-columns:1.45fr .8fr;margin-top:28px}
+    .stats{grid-template-columns:repeat(4,1fr);margin-top:18px}
+    .stat,.card,.month,.source,.temp-card{
+      border:1px solid var(--line);border-radius:20px;background:rgba(23,35,29,.86);box-shadow:0 10px 28px rgba(0,0,0,.12)
+    }
+    .stat{padding:18px}.stat b{display:block;font-size:24px;line-height:1.2}.stat span{color:var(--muted);font-size:13px}
+    .hero-note{padding:22px;border-radius:20px;background:rgba(214,179,106,.09);border:1px solid rgba(214,179,106,.24)}
+    .hero-note strong{color:#f0d59c}
+    nav{
+      display:flex;gap:8px;flex-wrap:wrap;position:sticky;top:8px;z-index:20;margin:18px 0 0;
+      padding:9px;border:1px solid var(--line);border-radius:16px;background:rgba(15,23,19,.88);backdrop-filter:blur(12px)
+    }
+    nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:10px;font-size:14px}
+    nav a:hover{background:var(--soft);color:white}
+    section{padding:38px 0 8px}
+    h2{font-size:clamp(26px,3.5vw,42px);letter-spacing:-.025em;margin:0 0 8px}
+    h3{margin:0 0 8px;font-size:20px}
+    .sub{margin:0 0 20px;color:var(--muted)}
+    .grid2{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:repeat(3,1fr)}
+    .card{padding:22px}
+    .tag{display:inline-flex;align-items:center;gap:7px;padding:5px 9px;border-radius:999px;font-size:12px;font-weight:800;background:var(--soft);color:#d5e5da}
+    .tag.gold{background:rgba(214,179,106,.13);color:#efd59b}
+    .tag.red{background:rgba(223,141,127,.12);color:#f0b0a5}
+    .tag.blue{background:rgba(158,184,207,.12);color:#c8daea}
+    .formula{font-size:clamp(24px,3vw,38px);font-weight:900;letter-spacing:-.03em;margin:12px 0}
+    .muted{color:var(--muted)}
+    .timeline{position:relative;margin-top:18px}
+    .timeline:before{content:"";position:absolute;left:12px;top:12px;bottom:12px;width:2px;background:var(--line)}
+    .titem{position:relative;padding:0 0 24px 42px}
+    .dot{position:absolute;left:4px;top:6px;width:18px;height:18px;border:4px solid var(--panel);background:var(--accent2);border-radius:50%}
+    .titem.official .dot{background:var(--accent)} .titem.estimate .dot{background:var(--blue)}
+    .date{font-size:13px;color:var(--accent);font-weight:800;letter-spacing:.05em}
+    .titem p{margin:4px 0 0;color:var(--muted)}
+    .calendar-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .month{padding:18px}.month-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+    .month-title b{font-size:18px}.dow,.days{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
+    .dow span{text-align:center;color:#8ea093;font-size:11px;padding:4px}
+    .day{min-height:66px;border-radius:10px;border:1px solid #27382f;padding:6px;background:#142019;position:relative;font-size:12px}
+    .day.off{background:#192a21}.day.before{opacity:.32}
+    .day .n{font-size:13px;font-weight:800}.day small{display:block;line-height:1.25;margin-top:5px;color:#b9c8be}
+    .day.event{outline:2px solid var(--accent);background:rgba(214,179,106,.08)}
+    .day.estimate{outline:1px dashed var(--blue)}
+    .day.comp{outline:2px solid var(--accent2);background:rgba(139,184,157,.08)}
+    .day.holiday{background:rgba(158,184,207,.08)}
+    .legend{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;color:var(--muted);font-size:12px}
+    .sw{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:4px;vertical-align:-1px}
+    .temp-row{display:grid;grid-template-columns:72px 1fr 72px;gap:12px;align-items:center;margin:16px 0}
+    .temp-bar{height:16px;border-radius:999px;background:#26372e;position:relative;overflow:hidden}
+    .temp-range{position:absolute;height:100%;border-radius:999px;background:linear-gradient(90deg,#7ea2ba,#d6b36a)}
+    .temp-mean{position:absolute;top:-4px;width:3px;height:24px;background:white;border-radius:3px}
+    .temp-card{padding:22px}
+    .temp-note{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}
+    .temp-note div{padding:12px;border-radius:14px;background:#132019;border:1px solid #293b31}
+    .temp-note b{display:block}
+    .checkgroup{margin-bottom:18px}
+    .check{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px dashed #314239}
+    .check input{width:19px;height:19px;margin-top:3px;accent-color:#bda15f}
+    .check label{cursor:pointer}.check small{display:block;color:var(--muted)}
+    .progress{height:10px;border-radius:999px;overflow:hidden;background:#26372e;margin:10px 0}
+    .progress > i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent2),var(--accent))}
+    .callout{padding:16px;border-left:4px solid var(--accent);background:rgba(214,179,106,.07);border-radius:0 12px 12px 0}
+    .warning{border-left-color:var(--danger);background:rgba(223,141,127,.07)}
+    .sources{display:grid;gap:10px}.source{padding:14px 16px}
+    .source a{font-weight:800;text-decoration:none}.source p{margin:4px 0 0;color:var(--muted);font-size:13px}
+    .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+    button,.btn{
+      border:1px solid #415a4b;background:#22372c;color:#f6f3e8;padding:10px 14px;border-radius:12px;
+      font:inherit;font-weight:800;cursor:pointer;text-decoration:none
+    }
+    button:hover,.btn:hover{background:#2a4436}
+    footer{padding:40px 0 60px;color:#85978b;font-size:13px}
+    @media(max-width:900px){
+      .hero-grid,.grid2,.grid3,.calendar-grid{grid-template-columns:1fr}
+      .stats{grid-template-columns:1fr 1fr}.temp-note{grid-template-columns:1fr 1fr}
+      .hero{padding:24px}.wrap{padding:14px}
+    }
+    @media(max-width:520px){.stats{grid-template-columns:1fr}.day{min-height:58px;padding:4px}.day small{font-size:9px}.temp-row{grid-template-columns:58px 1fr 58px}}
+    @media print{
+      body{background:white;color:#111}.wrap{max-width:none}.hero,.card,.month,.source,.temp-card{box-shadow:none;background:white;color:#111;border-color:#bbb}
+      .muted,.sub,.source p,.check small,.titem p{color:#444}.hero-note{background:#f6f2e7}.day{background:white;color:#111;border-color:#ccc}
+      nav,.btns{display:none} a{color:#111}
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">ROC Army · Success Ridge · 2026</div>
+    <h1>10/12 成功嶺<br>入伍行事曆</h1>
+    <p class="lead">依「91 年次、4 個月常備兵役軍事訓練、已有高中全民國防／軍訓折抵 5 天」製作。已把官方確定事項、合理估算與「必須等部隊公告」分開標示。</p>
+
+    <div class="stats">
+      <div class="stat"><span>入伍</span><b>2026/10/12</b><span>星期一 · 成功嶺</span></div>
+      <div class="stat"><span>梯次判斷</span><b>陸訓 0276</b><span>4 個月軍事訓練役</span></div>
+      <div class="stat"><span>折抵</span><b>5 天</b><span>須帶驗證過的成績單正本</span></div>
+      <div class="stat"><span>預估退役生效</span><b>2027/01/27</b><span>前提：5 天折抵核准</span></div>
+    </div>
+
+    <div class="hero-grid">
+      <div class="card">
+        <span class="tag gold">今天自動計算</span>
+        <div class="formula" id="countdown">載入中…</div>
+        <div class="muted" id="countdownSub"></div>
+        <div class="btns">
+          <a class="btn" href="#calendar">看行事曆</a>
+          <a class="btn" href="#packing">打包清單</a>
+          <button onclick="window.print()">列印 / 存成 PDF</button>
+        </div>
+      </div>
+      <div class="hero-note">
+        <strong>先記最重要的：</strong><br>
+        官方 0276 梯次預定表已確認 10/12 入伍；第一週不放假，其餘原則依國定例假日放假，並明列 <b>12/7、12/8 補第一週未放的例假日</b>。懇親會日期要等成功嶺實際通知。
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#estimate">退伍估算</a><a href="#timeline">大致流程</a><a href="#calendar">月曆</a>
+    <a href="#weather">氣溫</a><a href="#packing">準備清單</a><a href="#before">入伍前</a><a href="#sources">官方來源</a>
+  </nav>
+
+  <section id="estimate">
+    <h2>退伍日怎麼估</h2>
+    <p class="sub">這裡刻意不把「預估」寫成「已核定」。真正退役／結訓生效日，以部隊與役政正式核定為準。</p>
+    <div class="grid2">
+      <div class="card">
+        <span class="tag gold">估算</span>
+        <h3 style="margin-top:10px">2027/01/27 00:00 左右生效</h3>
+        <p class="muted">四個月軍事訓練現行架構為約 8 週入伍訓練 + 8 週專長訓練。近期陸軍軍訓梯次多呈現約 16 週（112 天）的流路；10/12 起算 112 天，再扣你核准的 5 天折抵，得到約 1/27 生效。</p>
+        <div class="callout">換句話說：若 5 天完整核准，<b>1/26 很可能是最後一個服役日</b>，1/27 零時起結訓／退役生效。</div>
+      </div>
+      <div class="card">
+        <span class="tag red">一定要做</span>
+        <h3 style="margin-top:10px">把「折抵 5 天」文件帶進去</h3>
+        <p class="muted">帶高中（職）以上學校開立、並由軍訓／相關主管單位驗證、清楚註記可折抵日數的成績單或證明正本。你的 5 天只有在部隊審認核准後，才會真正反映到結訓日。</p>
+        <p class="muted">83–93 年次常備兵役軍事訓練，學校全民國防教育軍事訓練折減上限為 15 天；你說的 5 天在上限內。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="timeline">
+    <h2>從入伍到退伍：大致流程</h2>
+    <p class="sub">金色＝官方已知；藍色＝依近期成功嶺同類梯次節奏估算。抽籤、鑑測、撥交仍可能前後移。</p>
+    <div class="card">
+      <div class="timeline">
+        <div class="titem official"><span class="dot"></span><div class="date">10/12</div><h3>入伍報到 · 成功嶺</h3><p>驗證身分、資料建檔、領裝備、理髮、編組、內務與生活規定說明。</p></div>
+        <div class="titem official"><span class="dot"></span><div class="date">10/12–10/18</div><h3>第一週不放假</h3><p>0276 官方預定表明列第一週不實施放假。</p></div>
+        <div class="titem estimate"><span class="dot"></span><div class="date">10/20–10/25 左右</div><h3>懇親 / 第一次離營窗口</h3><p>官方只寫「依各營區實際通知日期辦理」。近期成功嶺梯次常落在入伍後約 1–2 週，所以把這段當心理預期，不要先訂車票。</p></div>
+        <div class="titem"><span class="dot"></span><div class="date">10 月下旬～11 月</div><h3>入伍訓練主體</h3><p>體能、基本戰鬥教練、射擊與各項基礎課程；週末／國定例假日原則休假，但單位可依任務調整。</p></div>
+        <div class="titem estimate"><span class="dot"></span><div class="date">11 月下旬～12 月上旬</div><h3>抽籤 / 鑑測窗口</h3><p>依近期 4 個月陸軍軍訓梯次節奏估算；實際日期等連上公布。</p></div>
+        <div class="titem official"><span class="dot"></span><div class="date">12/07–12/08</div><h3>官方明列補假</h3><p>補入營第一週未放的兩個例假日。這是目前你整份行事曆裡，除了入伍日之外最明確的休假資訊。</p></div>
+        <div class="titem estimate"><span class="dot"></span><div class="date">12 月中旬左右</div><h3>撥交 / 進入專長訓練階段</h3><p>大約在入伍 8–9 週附近進入第二階段；有可能離開成功嶺到其他接訓單位。</p></div>
+        <div class="titem"><span class="dot"></span><div class="date">12 月中旬～1 月下旬</div><h3>專長訓練</h3><p>休假、收假與實際課程以接訓單位規定為準；不要假設之後每週一定都能照民間週休。</p></div>
+        <div class="titem official"><span class="dot"></span><div class="date">約 2027/01/27 00:00</div><h3>預估退役 / 結訓生效</h3><p>前提：5 天折抵確實核准，且你的梯次未因其他原因調整役期。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="calendar">
+    <h2>10 月～1 月行事曆</h2>
+    <p class="sub">週末以「可能例假」底色呈現，不代表軍方保證放假；軍事機關可依任務調移。12/7–8 則是 0276 官方表明列的補假。</p>
+    <div id="calendarGrid" class="calendar-grid"></div>
+    <div class="legend">
+      <span><i class="sw" style="background:#192a21"></i>週末／一般例假參考</span>
+      <span><i class="sw" style="background:#d6b36a"></i>官方重要日</span>
+      <span><i class="sw" style="background:#8bb89d"></i>官方補假</span>
+      <span><i class="sw" style="background:#9eb8cf"></i>估算窗口</span>
+    </div>
+  </section>
+
+  <section id="weather">
+    <h2>成功嶺服役期間氣溫分布</h2>
+    <p class="sub">以下用臺中 1991–2020 氣候常值做「穿衣與心理準備」；不是 2026–27 的逐日預報。數字順序為平均低溫 / 月均溫 / 平均高溫。</p>
+    <div class="temp-card">
+      <div class="temp-row"><b>10 月</b><div class="temp-bar"><span class="temp-range" style="left:55.5%;width:20.25%"></span><i class="temp-mean" style="left:63.75%"></i></div><span>22.2 / 25.5 / 30.3°C</span></div>
+      <div class="temp-row"><b>11 月</b><div class="temp-bar"><span class="temp-range" style="left:47.5%;width:21.5%"></span><i class="temp-mean" style="left:56.5%"></i></div><span>19.0 / 22.6 / 27.6°C</span></div>
+      <div class="temp-row"><b>12 月</b><div class="temp-bar"><span class="temp-range" style="left:37.75%;width:22%"></span><i class="temp-mean" style="left:46.75%"></i></div><span>15.1 / 18.7 / 23.9°C</span></div>
+      <div class="temp-row"><b>1 月</b><div class="temp-bar"><span class="temp-range" style="left:33.5%;width:22.25%"></span><i class="temp-mean" style="left:42.5%"></i></div><span>13.4 / 17.0 / 22.3°C</span></div>
+
+      <div class="temp-note">
+        <div><b>10 月</b><span class="muted">白天仍偏熱，操課流汗很正常；早晚已比夏天舒服。</span></div>
+        <div><b>11 月</b><span class="muted">日夜溫差開始明顯，清晨站哨或集合會比白天冷很多。</span></div>
+        <div><b>12 月</b><span class="muted">清晨常在 15°C 上下，遇冷氣團會明顯更低。</span></div>
+        <div><b>1 月</b><span class="muted">整段服役最冷；臺中平地典型平均低溫約 13–14°C。</span></div>
+      </div>
+      <p class="muted" style="margin-bottom:0">成功嶺位於臺中烏日／大肚一帶，戶外集合、空曠場地與風會讓體感比市區室內更冷；冬季建議把「保暖」重點放在部隊允許的發放服裝穿法與保持身體乾燥，不要自行塞太多私人厚衣。</p>
+    </div>
+  </section>
+
+  <section id="packing">
+    <h2>入伍準備清單</h2>
+    <p class="sub">可以直接勾選；進度會存在你這台裝置的瀏覽器裡。原則是「文件不能少、私人用品不要帶爆」。</p>
+    <div class="card" style="margin-bottom:16px">
+      <div style="display:flex;justify-content:space-between;gap:12px;align-items:center"><b>打包進度</b><span id="progressText" class="muted">0 / 0</span></div>
+      <div class="progress"><i id="progressBar"></i></div>
+      <button onclick="resetChecks()">全部取消勾選</button>
+    </div>
+    <div class="grid2">
+      <div class="card">
+        <div class="checkgroup"><span class="tag red">必帶文件</span>
+          <div class="check"><input type="checkbox" data-id="order"><label>徵集令正本<small>報到驗證最重要文件之一。</small></label></div>
+          <div class="check"><input type="checkbox" data-id="id"><label>國民身分證<small>報到驗證。</small></label></div>
+          <div class="check"><input type="checkbox" data-id="nhi"><label>健保卡<small>就醫使用。</small></label></div>
+          <div class="check"><input type="checkbox" data-id="seal"><label>私章<small>薪餉與行政作業。</small></label></div>
+          <div class="check"><input type="checkbox" data-id="bank"><label>存摺封面影本<small>國防部 FAQ 列郵局、土地銀行、合作金庫；若你的徵集令另有指定，以徵集令為準。</small></label></div>
+          <div class="check"><input type="checkbox" data-id="credit"><label><b>高中軍訓 / 全民國防折抵 5 天證明正本</b><small>務必確認學校已驗證並註記可折抵日數。</small></label></div>
+          <div class="check"><input type="checkbox" data-id="degree"><label>最高學歷畢業證書影本<small>官方列為學歷登載資料。</small></label></div>
+          <div class="check"><input type="checkbox" data-id="license"><label>專長 / 技術士證照影本（有才帶）<small>作為專長資料參考。</small></label></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="checkgroup"><span class="tag gold">建議帶</span>
+          <div class="check"><input type="checkbox" data-id="cash"><label>現金約 NT$1,000–2,000，帶小鈔<small>官方建議現金別超過 NT$3,000；前期買日用品較方便。</small></label></div>
+          <div class="check"><input type="checkbox" data-id="pens"><label>黑 / 藍筆 3–4 支 + 油性筆 1 支<small>填表、標記個人物品很實用。</small></label></div>
+          <div class="check"><input type="checkbox" data-id="notebook"><label>小筆記本<small>記電話、集合事項、收假時間。</small></label></div>
+          <div class="check"><input type="checkbox" data-id="toiletry"><label>牙刷牙膏、洗面用品、少量盥洗品<small>帶旅行尺寸即可；營站通常可補。</small></label></div>
+          <div class="check"><input type="checkbox" data-id="razor"><label>手動或電池式刮鬍刀<small>比插電式更省麻煩。</small></label></div>
+          <div class="check"><input type="checkbox" data-id="nail"><label>指甲剪<small>維持整潔。</small></label></div>
+          <div class="check"><input type="checkbox" data-id="glasses"><label>眼鏡 / 備用眼鏡（若需要）<small>操課時比隱形眼鏡更省事。</small></label></div>
+          <div class="check"><input type="checkbox" data-id="meds"><label>必要個人藥品 + 醫療證明（若有）<small>有特殊醫療需求時帶完整資料，主動告知幹部。</small></label></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="checkgroup"><span class="tag blue">手機相關</span>
+          <div class="check"><input type="checkbox" data-id="phone"><label>智慧型手機<small>可帶，但依國防部現行規定：不可為中國大陸品牌，且須安裝國軍 MDM 後才能在指定時間、區域使用。</small></label></div>
+          <div class="check"><input type="checkbox" data-id="cable"><label>充電線 / 充電器<small>營舍插座與使用時間有限，帶最簡單的一組即可。</small></label></div>
+          <div class="check"><input type="checkbox" data-id="contacts"><label>把重要電話抄在紙上<small>手機不一定隨時能拿，家人、區公所、重要聯絡人建議留紙本。</small></label></div>
+        </div>
+        <div class="callout warning">不要把筆電、相機、錄音設備、隨身碟、遊戲機等資訊儲存設備帶進營區；刀械、毒品、酒精飲品、賭博器具、檳榔等也屬禁止或不應攜帶物品。</div>
+      </div>
+      <div class="card">
+        <div class="checkgroup"><span class="tag">不用過度準備</span>
+          <div class="check"><input type="checkbox" data-id="hair"><label>不用為了入伍硬剪到 0.3 cm<small>國防部現行 FAQ：入伍前不必自行理髮，單位會安排專員理髮（需付費）。想先剪整齊可以，但不是必須。</small></label></div>
+          <div class="check"><input type="checkbox" data-id="clothes"><label>私人衣物保持精簡<small>報到穿一套簡單便服即可；軍中服裝與主要用品會依規定配發。</small></label></div>
+          <div class="check"><input type="checkbox" data-id="valuable"><label>貴重物品留在家<small>名錶、飾品、大額現金都不值得帶。</small></label></div>
+          <div class="check"><input type="checkbox" data-id="bag"><label>用一個好整理的後背包 / 小行李袋<small>能自己快速收納、搬動最重要。</small></label></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="before">
+    <h2>入伍前 7 天注意事項</h2>
+    <div class="grid3">
+      <div class="card"><h3>身體</h3><p class="muted">把作息慢慢調成早睡早起；做輕量跑步、深蹲、伏地挺身即可。最後幾天不要突然爆量訓練，避免帶傷入伍。</p></div>
+      <div class="card"><h3>行政</h3><p class="muted">先處理帳單、自動扣款、門號、訂閱、銀行驗證與需要回覆的事情。重要文件拍照備份到雲端，但正本仍照規定帶。</p></div>
+      <div class="card"><h3>家人</h3><p class="muted">把報到地點、預計可聯絡時段與「前一週可能幾乎聯絡不到」先講清楚。入營後拿到連隊資訊再補給家人。</p></div>
+      <div class="card"><h3>牙齒 / 眼鏡</h3><p class="muted">有明顯牙痛、眼鏡快壞、鏡片鬆脫，最好入伍前先處理；這些在新訓裡會比平常麻煩很多。</p></div>
+      <div class="card"><h3>交通</h3><p class="muted">完全照徵集令的集合地點與時間走，不要自行假設直接到哪一個門。成功嶺 1 號門、3 號門交通方式不同。</p></div>
+      <div class="card"><h3>心態</h3><p class="muted">前 1–2 週最不自由、資訊也最少；之後流程通常就固定很多。把「準時、東西收好、聽清楚再做」放在前面，會省掉大量麻煩。</p></div>
+    </div>
+    <div class="callout" style="margin-top:16px"><b>收假：</b>國防部 FAQ 的一般規定為義務役休假結束日 21:00 前返營；但你實際梯次的預定表寫「原則晚上 7 點，依路途機動調整」。兩者並不矛盾：<b>每次以連上／新訓單位實際通知的收假時間為準</b>，不要自己抓 21:00 壓線。</div>
+  </section>
+
+  <section id="sources">
+    <h2>我用的官方資料</h2>
+    <p class="sub">最後整理日期：2026/10/04。你可以從這裡自行核對；尤其是入伍後的新公告。</p>
+    <div class="sources">
+      <div class="source"><a href="https://dca.moi.gov.tw/chaspx/News_Detail.aspx?id=15423&web=49" target="_blank" rel="noopener">內政部役政司｜陸軍 115/10/12 第 0276 梯次預定行程表</a><p>確認 10/12 入伍；第一週不放假；12/7–12/8 補第一週例假日；懇親與實際放假仍以新訓單位通知為準。</p></div>
+      <div class="source"><a href="https://orgws.kcg.gov.tw/001/KcgOrgUploadFiles/10/RelFile/7312/539751/e92ae187-520e-4754-87f8-b529d5a1ed20.pdf" target="_blank" rel="noopener">0276 梯次官方 PDF</a><p>一頁式原始預定表。</p></div>
+      <div class="source"><a href="https://www.mnd.gov.tw/CitizenServices/FAQ" target="_blank" rel="noopener">國防部｜服役須知 FAQ</a><p>入營必帶資料、手機 MDM、禁止攜帶物品、髮式、休收假等現行規定。</p></div>
+      <div class="source"><a href="https://dca.moi.gov.tw/chaspx/content.aspx?web=97" target="_blank" rel="noopener">內政部役政司｜兵役法與軍事訓練折減</a><p>4 個月內軍事訓練與學校全民國防教育軍事訓練折減規定。</p></div>
+      <div class="source"><a href="https://dca.moi.gov.tw/chaspx/query03.aspx?web=115" target="_blank" rel="noopener">內政部役政司｜退役日期試算</a><p>官方提醒：試算僅供參考，正式生效日仍以核定公文為準。</p></div>
+      <div class="source"><a href="https://www.dgpa.gov.tw/information?pid=12574&uid=82" target="_blank" rel="noopener">行政院人事行政總處｜2026 政府辦公日曆</a><p>可參考國定假日，但軍事機關屬性特殊，得視需要調移。</p></div>
+      <div class="source"><a href="https://www.cwa.gov.tw/Data/climate/Watch/mrcs/mrcs202411.pdf" target="_blank" rel="noopener">中央氣象署｜氣候監測報告</a><p>臺中 1991–2020 氣候常值。頁面中的 10–1 月平均溫度亦以氣象署常值交叉核對。</p></div>
+    </div>
+  </section>
+
+  <footer>
+    這是一份「入伍前規劃版」，不是軍令。徵集令、成功嶺連隊公告、幹部通知與正式役期核定的優先順序永遠高於本頁。<br>
+    建議檔名直接叫 <b>index.html</b>，上傳到 GitHub Pages 的 main / root 就能直接開。
+  </footer>
+</div>
+
+<script>
+const enlist = new Date('2026-10-12T00:00:00+08:00');
+const discharge = new Date('2027-01-27T00:00:00+08:00');
+const msDay = 86400000;
+
+function updateCountdown(){
+  const now = new Date();
+  const c = document.getElementById('countdown'), s = document.getElementById('countdownSub');
+  if(now < enlist){
+    const d = Math.ceil((enlist-now)/msDay);
+    c.textContent = `距離入伍 ${d} 天`;
+    s.textContent = '先把文件、折抵證明與生活安排處理好。';
+  }else if(now < discharge){
+    const served = Math.floor((now-enlist)/msDay)+1;
+    const left = Math.ceil((discharge-now)/msDay);
+    c.textContent = `第 ${served} 天 · 約剩 ${left} 天`;
+    s.textContent = '以 2027/01/27 退役生效的估算日期計。';
+  }else{
+    c.textContent = '預估役期已完成 🎉';
+    s.textContent = '若你的正式核定日期不同，以正式退役／結訓命令為準。';
+  }
+}
+updateCountdown();
+
+const events = {
+  '2026-10-12': {t:'入伍', cls:'event'},
+  '2026-12-07': {t:'官方補假', cls:'comp'},
+  '2026-12-08': {t:'官方補假', cls:'comp'},
+  '2027-01-27': {t:'預估退役生效', cls:'event'}
+};
+const estimates = {
+  '2026-12-01':'抽籤 / 鑑測估算窗',
+  '2026-12-14':'撥交估算窗'
+};
+const holidays = {
+  '2026-10-26':'光復紀念日補假＊',
+  '2026-12-25':'行憲紀念日＊',
+  '2027-01-01':'元旦＊'
+};
+
+function monthHTML(y,m){
+  const names=['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'];
+  const first = new Date(y,m,1), last = new Date(y,m+1,0);
+  let html=`<div class="month"><div class="month-title"><b>${y} · ${names[m]}</b><span class="tag">${last.getDate()} days</span></div>
+  <div class="dow">${['日','一','二','三','四','五','六'].map(x=>`<span>${x}</span>`).join('')}</div><div class="days">`;
+  for(let i=0;i<first.getDay();i++) html += `<div></div>`;
+  for(let d=1;d<=last.getDate();d++){
+    const dt = new Date(y,m,d);
+    const key = `${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+    let cls='day';
+    if(dt.getDay()===0 || dt.getDay()===6) cls+=' off';
+    if(dt < enlist) cls+=' before';
+    let label='';
+    if(events[key]){ cls+=' '+events[key].cls; label=events[key].t; }
+    else if(estimates[key]){ cls+=' estimate'; label=estimates[key]; }
+    else if(holidays[key]){ cls+=' holiday'; label=holidays[key]; }
+    if(key==='2026-10-17' || key==='2026-10-18') label='第一週不放';
+    html += `<div class="${cls}"><span class="n">${d}</span>${label?`<small>${label}</small>`:''}</div>`;
+  }
+  html += `</div></div>`;
+  return html;
+}
+document.getElementById('calendarGrid').innerHTML = [
+  monthHTML(2026,9),monthHTML(2026,10),monthHTML(2026,11),monthHTML(2027,0)
+].join('');
+
+const checks=[...document.querySelectorAll('.check input')];
+function saveChecks(){
+  const state={}; checks.forEach(x=>state[x.dataset.id]=x.checked);
+  localStorage.setItem('success-ridge-checks',JSON.stringify(state)); updateProgress();
+}
+function loadChecks(){
+  try{
+    const state=JSON.parse(localStorage.getItem('success-ridge-checks')||'{}');
+    checks.forEach(x=>x.checked=!!state[x.dataset.id]);
+  }catch(e){}
+  updateProgress();
+}
+function updateProgress(){
+  const done=checks.filter(x=>x.checked).length, total=checks.length;
+  document.getElementById('progressText').textContent=`${done} / ${total}`;
+  document.getElementById('progressBar').style.width=(total?done/total*100:0)+'%';
+}
+function resetChecks(){checks.forEach(x=>x.checked=false);saveChecks();}
+checks.forEach(x=>x.addEventListener('change',saveChecks));
+loadChecks();
+</script>
+</body>
+</html>
